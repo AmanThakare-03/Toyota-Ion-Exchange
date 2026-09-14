@@ -12,6 +12,7 @@ import Anion from "./Product/Anion";
 import Mixedbed from "./Product/Mixedbed";
 import Watersoftener from "./Product/Watersoftener";
 import Specialty from "./Product/Specialty";
+import Industries from "./Industries";
 
 function SitePage({ title, eyebrow = "TOYOTA CHEMICAL INDUSTRIES", children }) {
   return (
@@ -41,15 +42,15 @@ function Applications() {
   );
 }
 
-function Industries() {
-  return (
-    <SitePage title="Industries">
-      Our resin portfolio supports demanding water-treatment requirements
-      across power, chemical, pharmaceutical, textile, steel and process
-      industries.
-    </SitePage>
-  );
-}
+// function Industries() {
+//   return (
+//     <SitePage title="Industries">
+//       Our resin portfolio supports demanding water-treatment requirements
+//       across power, chemical, pharmaceutical, textile, steel and process
+//       industries.
+//     </SitePage>
+//   );
+// }
 
 function Partners() {
   return (
