@@ -1187,6 +1187,23 @@ const customers = [
   "PSPCL",
 ];
 
+ function SectionLabel({ children, light = false }) {
+   return (
+     <div
+       className={`mb-3 flex items-center gap-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] ${
+         light ? "text-[#DF9B42]" : "text-[#B27B34]"
+       }`}
+     >
+       <span
+         className={`h-px w-8 ${
+           light ? "bg-[#DF9B42]" : "bg-[#B27B34]"
+         }`}
+       />
+       <span>{children}</span>
+     </div>
+   );
+ }
+
 export default function Contact() {
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -1622,6 +1639,7 @@ export default function Contact() {
               </div>
             </div>
             {/*d 4: Service Ar*/}
+            
             <div className="bg-brand-navy text-white p-6 relative corner-brackets shadow-md border-l-4 border-brand-gold">
               <div className="mb-2">
                 <span className="text-[10px] font-mono text-brand-goldLight uppercase tracking-widest block">
@@ -1647,6 +1665,55 @@ export default function Contact() {
         </div>
       </div>
     </section>
+    <section className="bg-[#EEF4F9]">
+
+          <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12">
+
+            <div className="mb-8">
+
+              <SectionLabel>
+                Factory Location // GIDC Vapi
+              </SectionLabel>
+
+              <h2 className="font-display text-4xl font-semibold text-[#0A2C4B] sm:text-5xl">
+                Find us in Vapi, Gujarat.
+              </h2>
+
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-[#52667D]">
+                Toyota Chemical Industries Pvt. Ltd. factory is located at
+                Plot No. 100, Vapi–Silvassa Road, GIDC Vapi, Gujarat 396195,
+                India.
+              </p>
+
+            </div>
+
+
+            <div className="relative overflow-hidden border border-[#B7CBDD] bg-white p-2">
+
+              <iframe
+                title="Toyota Chemical Industries GIDC Vapi"
+                src="https://maps.google.com/maps?q=20.3594162,72.9252245&z=14&output=embed"
+                loading="lazy"
+                className="h-[380px] w-full border-0 sm:h-[460px]"
+              />
+
+              <div className="pointer-events-none absolute left-6 top-6 bg-[#061729]/95 px-4 py-3">
+
+                <div className="font-mono text-[9px] font-bold uppercase tracking-[0.15em] text-[#DF9B42]">
+                  GIDC VAPI
+                </div>
+
+                <div className="mt-1 font-mono text-[8px] uppercase tracking-widest text-white">
+                  Gujarat // India
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
     {/*: MainContactConsoleGr*/}
     {/*IN: CompliancePilla*/}
     <section className="py-16 bg-brand-ice border-y border-brand-blueprint" data-purpose="compliance-pillars">
@@ -1734,6 +1801,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
+    
     {/*: CompliancePilla*/}
     {/*IN: TechnicalKnowledgeBaseF*/}
     <section className="py-16 sm:py-24 bg-white" data-purpose="technical-knowledge-base-faq">
