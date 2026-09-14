@@ -103,7 +103,7 @@ export default function Header() {
                   <div className="flex items-center justify-between py-4">
                     <Link to="/products" onClick={closeMobile} className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#1868A8]">Products</Link>
                     <button type="button" onClick={() => setProductsOpen((open) => !open)} className="text-[#1868A8]" aria-label="Toggle mobile products menu" aria-expanded={productsOpen}>
-                      <svg className={`h-4 w-4 transition-transform ${productsOpen ? "rotate-180" : ""}`} viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.51a.75.75 0 01-1.08 0l-4.25-4.51a.75.75 0 01-1.08 0l-4.25-4.51a.75.75 0 01.02-1.06z" clipRule="evenodd" /></svg>
+                      <svg className={`h-4 w-4 transition-transform ${productsOpen ? "rotate-180" : ""}`} viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.51a.75.75 0 01-1.08 0l-4.25-4.51a.75.75 0 01.02-1.06z" clipRule="evenodd" /></svg>
                     </button>
                   </div>
                   {productsOpen && (
