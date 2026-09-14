@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
 
 const customers = [
   "GAIL",
@@ -241,9 +242,9 @@ export default function Contact() {
 
             {/* Breadcrumb */}
             <div className="mb-8 flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.16em] text-[#71849A]">
-              <a href="/" className="hover:text-[#B27B34]">
+              <Link to="/" className="hover:text-[#B27B34]">
                 Home
-              </a>
+              </Link>
 
               <span>/</span>
 
@@ -701,12 +702,12 @@ export default function Contact() {
 
                     <span>
                       I agree to be contacted about this enquiry. See our{" "}
-                      <a
-                        href="/privacy-policy"
+                      <Link
+                        to="/privacy-policy"
                         className="font-semibold text-[#1868A8] underline"
                       >
                         Privacy Policy
-                      </a>
+                      </Link>
                       .
                     </span>
 

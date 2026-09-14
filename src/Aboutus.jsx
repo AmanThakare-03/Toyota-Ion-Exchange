@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
 
 const industries = [
   "Power Generation",
@@ -244,12 +245,12 @@ function About() {
         ========================== */}
         <div className="mx-auto max-w-[1440px] px-5 pt-7 lg:px-8">
           <div className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-widest text-slate-500">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="transition-colors hover:text-[#1868A8]"
             >
               Home
-            </a>
+            </Link>
 
             <span>/</span>
 
@@ -299,12 +300,12 @@ function About() {
                   Discover Our Story →
                 </a>
 
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="border border-[#0A2C4B] bg-white px-6 py-4 font-mono text-[10px] font-bold uppercase tracking-wider text-[#0A2C4B] transition hover:bg-[#F6F9FC]"
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
 
               <div className="mt-12 grid max-w-3xl grid-cols-2 border-y border-[#DAE7F1] sm:grid-cols-4">
@@ -418,13 +419,13 @@ function About() {
                   customers and partners.
                 </p>
 
-                <a
-                  href="/Product/Cationanion"
+                <Link
+                  to="/products/cationanion"
                   className="mt-8 inline-flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-[#1868A8] transition hover:text-[#B27B34]"
                 >
                   Explore Our Products
                   <span className="text-base">→</span>
-                </a>
+                </Link>
               </div>
 
               <div className="lg:col-span-5">
@@ -772,9 +773,9 @@ function About() {
 
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {industries.map((industry, index) => (
-                <a
+                <Link
                   key={industry}
-                  href="/industries"
+                  to="/industries"
                   className="group flex items-center justify-between border border-[#DAE7F1] bg-white p-6 transition hover:-translate-y-1 hover:border-[#B27B34] hover:shadow-[0_16px_32px_-10px_rgba(10,44,75,0.10)]"
                 >
                   <div>
@@ -790,7 +791,7 @@ function About() {
                   <span className="text-[#B27B34] transition-transform group-hover:translate-x-1">
                     →
                   </span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -1035,19 +1036,19 @@ function About() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="bg-[#B27B34] px-6 py-4 font-mono text-[10px] font-bold uppercase tracking-wider text-white transition hover:bg-[#DF9B42]"
               >
                 Contact Us
-              </a>
+              </Link>
 
-              <a
-                href="/Product/Cationanion"
+              <Link
+                to="/products/cationanion"
                 className="border border-white/30 px-6 py-4 font-mono text-[10px] font-bold uppercase tracking-wider text-white transition hover:bg-white/10"
               >
                 View Products
-              </a>
+              </Link>
             </div>
           </div>
         </section>

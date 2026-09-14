@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 export default function Footer() {
   const resinCategories = [
@@ -36,7 +37,7 @@ export default function Footer() {
           {/* ================= COMPANY ================= */}
           <div>
             {/* Logo */}
-            <a href="/" className="inline-flex items-center gap-3">
+            <Link to="/" className="inline-flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center bg-[#B27B34] text-sm font-bold text-white">
                 TC
               </div>
@@ -50,7 +51,7 @@ export default function Footer() {
                   Industries Pvt. Ltd. · Since 1972
                 </div>
               </div>
-            </a>
+            </Link>
 
             {/* Description */}
             <p className="mt-7 max-w-md text-sm leading-7 text-slate-300">
@@ -87,8 +88,8 @@ export default function Footer() {
             <ul className="space-y-4">
               {resinCategories.map((item) => (
                 <li key={item}>
-                  <a
-                    href="/products"
+                  <Link
+                    to="/products"
                     className="group flex items-start gap-3 text-sm leading-5 text-slate-300 transition-colors hover:text-white"
                   >
                     <span className="mt-1 text-[#B27B34] transition-transform group-hover:translate-x-1">
@@ -96,7 +97,7 @@ export default function Footer() {
                     </span>
 
                     <span>{item}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -111,8 +112,8 @@ export default function Footer() {
             <ul className="space-y-4">
               {technicalLinks.map((item) => (
                 <li key={item}>
-                  <a
-                    href="/resources"
+                  <Link
+                    to="/resources"
                     className="group flex items-start gap-3 text-sm leading-5 text-slate-300 transition-colors hover:text-white"
                   >
                     <span className="mt-1 text-[#B27B34] transition-transform group-hover:translate-x-1">
@@ -120,7 +121,7 @@ export default function Footer() {
                     </span>
 
                     <span>{item}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -133,13 +134,13 @@ export default function Footer() {
 
               <div className="grid grid-cols-2 gap-x-5 gap-y-3">
                 {companyLinks.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     className="text-xs text-slate-400 transition-colors hover:text-[#DF9B42]"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -197,13 +198,13 @@ export default function Footer() {
             </div>
 
             {/* CTA */}
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="mt-7 inline-flex w-full items-center justify-center gap-3 bg-[#B27B34] px-6 py-4 font-mono text-[9px] font-bold uppercase tracking-[0.12em] text-white transition-all hover:bg-[#DF9B42]"
             >
               Request a Quote
               <span className="text-base">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -224,33 +225,33 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div className="flex flex-wrap gap-x-6 gap-y-3">
-            <a
-              href="/legal-notice"
+            <Link
+              to="/legal-notice"
               className="font-mono text-[9px] uppercase tracking-wider text-slate-500 transition-colors hover:text-[#DF9B42]"
             >
               Legal Notice
-            </a>
+            </Link>
 
-            <a
-              href="/privacy-policy"
+            <Link
+              to="/privacy-policy"
               className="font-mono text-[9px] uppercase tracking-wider text-slate-500 transition-colors hover:text-[#DF9B42]"
             >
               Privacy Policy
-            </a>
+            </Link>
 
-            <a
-              href="/quality-compliance"
+            <Link
+              to="/quality-compliance"
               className="font-mono text-[9px] uppercase tracking-wider text-slate-500 transition-colors hover:text-[#DF9B42]"
             >
               Quality Compliance
-            </a>
+            </Link>
 
-            <a
-              href="/sustainability"
+            <Link
+              to="/sustainability"
               className="font-mono text-[9px] uppercase tracking-wider text-slate-500 transition-colors hover:text-[#DF9B42]"
             >
               Sustainability Charter
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -266,13 +267,13 @@ export default function Footer() {
             Call Factory
           </a>
 
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="flex items-center justify-center gap-2 bg-[#B27B34] px-4 py-3 font-mono text-[9px] font-bold uppercase tracking-wider text-white"
           >
             Request Quote
             <span>→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
